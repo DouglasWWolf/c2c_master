@@ -16,7 +16,8 @@
 module traffic_gen #(AXI_TARGET = 32'h4000_0000)
 (
     input clk, resetn,
-
+  
+    input link_status,
 
     //============================  An AXI-Lite Master Interface  ===================================
 
@@ -84,7 +85,7 @@ module traffic_gen #(AXI_TARGET = 32'h4000_0000)
         
         amci_write <= 0;
 
-        if (resetn == 0) begin
+        if (resetn == 0 || link_status == 0) begin
             fsm_state <= 0;
             leds      <= 1;
             counter   <= 0;

@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-//Date        : Mon Sep 19 17:20:43 2022
+//Date        : Mon Sep 19 21:41:12 2022
 //Host        : simtool5-2 running 64-bit Ubuntu 20.04.5 LTS
 //Command     : generate_target board_wrapper.bd
 //Design      : board_wrapper
@@ -10,7 +10,7 @@
 `timescale 1 ps / 1 ps
 
 module board_wrapper
-   (GPIO_LED_tri_o,
+   (c2c_link_status,
     channel_up_0,
     channel_up_1,
     clk_100mhz_clk_n,
@@ -31,7 +31,7 @@ module board_wrapper
     qsfp1_tx_txp,
     sys_reset_out_0,
     sys_reset_out_1);
-  output [3:0]GPIO_LED_tri_o;
+  output c2c_link_status;
   output channel_up_0;
   output channel_up_1;
   input [0:0]clk_100mhz_clk_n;
@@ -53,7 +53,7 @@ module board_wrapper
   output sys_reset_out_0;
   output sys_reset_out_1;
 
-  wire [3:0]GPIO_LED_tri_o;
+  wire c2c_link_status;
   wire channel_up_0;
   wire channel_up_1;
   wire [0:0]clk_100mhz_clk_n;
@@ -76,7 +76,7 @@ module board_wrapper
   wire sys_reset_out_1;
 
   board board_i
-       (.GPIO_LED_tri_o(GPIO_LED_tri_o),
+       (.c2c_link_status(c2c_link_status),
         .channel_up_0(channel_up_0),
         .channel_up_1(channel_up_1),
         .clk_100mhz_clk_n(clk_100mhz_clk_n),

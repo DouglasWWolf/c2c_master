@@ -97,7 +97,7 @@ set_property  -dict {PACKAGE_PIN B6 IOSTANDARD LVCMOS33} [get_ports pb_rst_n]  ;
  set_property  -dict {PACKAGE_PIN A4  IOSTANDARD LVCMOS33}  [get_ports {  led_heartbeat }]
  set_property  -dict {PACKAGE_PIN C5  IOSTANDARD LVCMOS33}  [get_ports {    channel_up_1}]
  set_property  -dict {PACKAGE_PIN C6  IOSTANDARD LVCMOS33}  [get_ports { sys_reset_out_1}]
-#set_property  -dict {PACKAGE_PIN C1  IOSTANDARD LVCMOS33}  [get_ports {  led[5]        }]
+ set_property  -dict {PACKAGE_PIN C1  IOSTANDARD LVCMOS33}  [get_ports {c2c_link_status }]
 #set_property  -dict {PACKAGE_PIN D2  IOSTANDARD LVCMOS33}  [get_ports { GPIO_LED_tri_o[0] }]
 #set_property  -dict {PACKAGE_PIN D3  IOSTANDARD LVCMOS33}  [get_ports { GPIO_LED_tri_o[1] }]
 #set_property  -dict {PACKAGE_PIN D4  IOSTANDARD LVCMOS33}  [get_ports { GPIO_LED_tri_o[2] }]
