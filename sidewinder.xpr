@@ -132,35 +132,35 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_bandwidth_test_0_0/board_bandwidth_test_0_0.xci">
-          <Proxy FileSetName="board_bandwidth_test_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_aurora_64b66b_0_2/board_aurora_64b66b_0_2.xci">
-          <Proxy FileSetName="board_aurora_64b66b_0_2"/>
+        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_aurora_64b66b_0_1/board_aurora_64b66b_0_1.xci">
+          <Proxy FileSetName="board_aurora_64b66b_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_axi_chip2chip_0_0/board_axi_chip2chip_0_0.xci">
           <Proxy FileSetName="board_axi_chip2chip_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_aurora_64b66b_0_1/board_aurora_64b66b_0_1.xci">
-          <Proxy FileSetName="board_aurora_64b66b_0_1"/>
+        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_bandwidth_test_0_0/board_bandwidth_test_0_0.xci">
+          <Proxy FileSetName="board_bandwidth_test_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_proc_sys_reset_0_0/board_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="board_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_binker_0_0/board_binker_0_0.xci">
-          <Proxy FileSetName="board_binker_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_util_ds_buf_0_0/board_util_ds_buf_0_0.xci">
-          <Proxy FileSetName="board_util_ds_buf_0_0"/>
+        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_reset_manager_0_0/board_reset_manager_0_0.xci">
+          <Proxy FileSetName="board_reset_manager_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_traffic_gen_0_0/board_traffic_gen_0_0.xci">
           <Proxy FileSetName="board_traffic_gen_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_reset_manager_0_0/board_reset_manager_0_0.xci">
-          <Proxy FileSetName="board_reset_manager_0_0"/>
+        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_aurora_64b66b_0_2/board_aurora_64b66b_0_2.xci">
+          <Proxy FileSetName="board_aurora_64b66b_0_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_util_vector_logic_0_0/board_util_vector_logic_0_0.xci">
           <Proxy FileSetName="board_util_vector_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_util_ds_buf_0_0/board_util_ds_buf_0_0.xci">
+          <Proxy FileSetName="board_util_ds_buf_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="board.bd" FileRelPathName="ip/board_binker_0_0/board_binker_0_0.xci">
+          <Proxy FileSetName="board_binker_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/board/hdl/board_wrapper.v">
