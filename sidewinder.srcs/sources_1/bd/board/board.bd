@@ -1,20 +1,20 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x117C3BB9FBA06E54",
+      "boundary_crc": "0xB900A24E818BB85D",
       "device": "xczu19eg-ffvc1760-2-i",
       "gen_directory": "../../../../sidewinder.gen/sources_1/bd/board",
       "name": "board",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2021.1"
+      "tool_version": "2021.1",
+      "validated": "true"
     },
     "design_tree": {
       "system_clock": "",
       "blinker": "",
       "system_reset": "",
       "system_interconnect": "",
-      "axi_gpio": "",
       "traffic_generator": "",
       "qsfp_c2c": {
         "aurora_core": "",
@@ -26,20 +26,34 @@
         "aurora_core": "",
         "reset_inverter": "",
         "stream_signals": "",
-        "reset_delay": ""
+        "reset_manager": ""
       }
     },
     "interface_ports": {
       "clk_100mhz": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
-        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0"
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        }
       },
       "qsfp1_clk": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
         "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
         "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "322265625"
           }
@@ -55,16 +69,15 @@
         "vlnv_bus_definition": "xilinx.com:display_aurora:GT_Serial_Transceiver_Pins_TX:1.0",
         "vlnv": "xilinx.com:display_aurora:GT_Serial_Transceiver_Pins_TX_rtl:1.0"
       },
-      "GPIO_LED": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
-      },
       "qsfp0_clk": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
         "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
         "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "322265625"
           }
@@ -87,7 +100,17 @@
       },
       "pb_rst_n": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "channel_up_1": {
         "direction": "O"
@@ -96,6 +119,10 @@
         "type": "rst",
         "direction": "O",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -105,6 +132,10 @@
         "type": "rst",
         "direction": "O",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -178,7 +209,7 @@
         "inst_hier_path": "system_interconnect",
         "parameters": {
           "NUM_MI": {
-            "value": "3"
+            "value": "2"
           },
           "NUM_SI": {
             "value": "1"
@@ -199,8 +230,7 @@
             },
             "bridges": [
               "M00_AXI",
-              "M01_AXI",
-              "M02_AXI"
+              "M01_AXI"
             ]
           },
           "M00_AXI": {
@@ -234,31 +264,6 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "MAX_BURST_LENGTH": {
-                "value": "1"
-              },
-              "NUM_READ_OUTSTANDING": {
-                "value": "1"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "1"
-              },
-              "RUSER_BITS_PER_BYTE": {
-                "value": "0"
-              },
-              "SUPPORTS_NARROW_BURST": {
-                "value": "0"
-              },
-              "WUSER_BITS_PER_BYTE": {
-                "value": "0"
-              }
-            }
-          },
-          "M02_AXI": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "MAX_BURST_LENGTH": {
                 "value": "256"
               },
               "NUM_READ_OUTSTANDING": {
@@ -277,23 +282,6 @@
                 "value": "0"
               }
             }
-          }
-        }
-      },
-      "axi_gpio": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "board_axi_gpio_0_0",
-        "xci_path": "ip/board_axi_gpio_0_0/board_axi_gpio_0_0.xci",
-        "inst_hier_path": "axi_gpio",
-        "parameters": {
-          "C_GPIO_WIDTH": {
-            "value": "4"
-          },
-          "GPIO_BOARD_INTERFACE": {
-            "value": "Custom"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
           }
         }
       },
@@ -959,7 +947,7 @@
               },
               "PHASE": {
                 "value": "0",
-                "value_src": "default_prop"
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
                 "value": "board_aurora_64b66b_0_2_user_clk_out",
@@ -1030,7 +1018,7 @@
               },
               "PHASE": {
                 "value": "0",
-                "value_src": "default_prop"
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
                 "value": "board_aurora_64b66b_0_2_user_clk_out",
@@ -1078,7 +1066,7 @@
               },
               "PHASE": {
                 "value": "0",
-                "value_src": "default_prop"
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
                 "value": "board_aurora_64b66b_0_2_user_clk_out",
@@ -1283,14 +1271,14 @@
               }
             }
           },
-          "reset_delay": {
-            "vlnv": "xilinx.com:module_ref:reset_delay:1.0",
-            "xci_name": "board_reset_delay_0_0",
-            "xci_path": "ip/board_reset_delay_0_0/board_reset_delay_0_0.xci",
-            "inst_hier_path": "qsfp_data/reset_delay",
+          "reset_manager": {
+            "vlnv": "xilinx.com:module_ref:reset_manager:1.0",
+            "xci_name": "board_reset_manager_0_0",
+            "xci_path": "ip/board_reset_manager_0_0/board_reset_manager_0_0.xci",
+            "inst_hier_path": "qsfp_data/reset_manager",
             "reference_info": {
               "ref_type": "hdl",
-              "ref_name": "reset_delay",
+              "ref_name": "reset_manager",
               "boundary_crc": "0x0"
             },
             "ports": {
@@ -1318,7 +1306,7 @@
                   }
                 }
               },
-              "reset_out": {
+              "reset_pb_out": {
                 "type": "rst",
                 "direction": "O",
                 "parameters": {
@@ -1328,12 +1316,12 @@
                   }
                 }
               },
-              "resetn_out": {
+              "pma_init_out": {
                 "type": "rst",
                 "direction": "O",
                 "parameters": {
                   "POLARITY": {
-                    "value": "ACTIVE_LOW",
+                    "value": "ACTIVE_HIGH",
                     "value_src": "constant"
                   }
                 }
@@ -1413,14 +1401,7 @@
             "ports": [
               "init_clk",
               "aurora_core/init_clk",
-              "reset_delay/clock"
-            ]
-          },
-          "pma_init_1": {
-            "ports": [
-              "reset_delay/reset_out",
-              "aurora_core/pma_init",
-              "aurora_core/reset_pb"
+              "reset_manager/clock"
             ]
           },
           "probe0_1": {
@@ -1437,13 +1418,25 @@
           "reset_in_1": {
             "ports": [
               "reset_in",
-              "reset_delay/reset_in"
+              "reset_manager/reset_in"
             ]
           },
           "reset_inverter_Res": {
             "ports": [
               "reset_inverter/Res",
               "stream_signals/resetn"
+            ]
+          },
+          "reset_manager_0_pma_init_out": {
+            "ports": [
+              "reset_manager/pma_init_out",
+              "aurora_core/pma_init"
+            ]
+          },
+          "reset_manager_0_reset_pb_out": {
+            "ports": [
+              "reset_manager/reset_pb_out",
+              "aurora_core/reset_pb"
             ]
           }
         }
@@ -1469,12 +1462,6 @@
             "value": "true"
           }
         }
-      },
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "GPIO_LED",
-          "axi_gpio/GPIO"
-        ]
       },
       "bandwidth_test_0_OUT_AXIS": {
         "interface_ports": [
@@ -1526,21 +1513,15 @@
           "qsfp_data/qsfp_tx"
         ]
       },
-      "smartconnect_0_M01_AXI": {
-        "interface_ports": [
-          "system_interconnect/M01_AXI",
-          "axi_gpio/S_AXI"
-        ]
-      },
       "system_interconnect_M00_AXI": {
         "interface_ports": [
           "system_interconnect/M00_AXI",
           "qsfp_c2c/s_axi_lite"
         ]
       },
-      "system_interconnect_M02_AXI": {
+      "system_interconnect_M01_AXI": {
         "interface_ports": [
-          "system_interconnect/M02_AXI",
+          "system_interconnect/M01_AXI",
           "qsfp_c2c/s_axi"
         ]
       },
@@ -1625,7 +1606,6 @@
           "blinker/CLK",
           "system_reset/slowest_sync_clk",
           "system_interconnect/aclk",
-          "axi_gpio/s_axi_aclk",
           "traffic_generator/clk",
           "qsfp_c2c/init_clk",
           "qsfp_data/init_clk"
@@ -1636,7 +1616,6 @@
           "system_reset/peripheral_aresetn",
           "blinker/RESETN",
           "system_interconnect/aresetn",
-          "axi_gpio/s_axi_aresetn",
           "traffic_generator/resetn",
           "qsfp_c2c/s_aresetn"
         ]
@@ -1661,11 +1640,6 @@
               },
               "SEG_axi_chip2chip_0_Reg": {
                 "address_block": "/qsfp_c2c/axi_chip2chip/s_axi_lite/Reg",
-                "offset": "0x44A00000",
-                "range": "64K"
-              },
-              "SEG_axi_gpio_Reg": {
-                "address_block": "/axi_gpio/S_AXI/Reg",
                 "offset": "0x40000000",
                 "range": "64K"
               }
