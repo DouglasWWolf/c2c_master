@@ -2,49 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="bd_c0ec" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1663663152"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1663663151"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1663663152"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1663663151"/>
-    <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth/bd_c0ec.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim/bd_c0ec.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="sim/bd_c0ec.protoinst">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="bd_c0ec_ooc.xdc" Type="XDC">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="OUT_OF_CONTEXT"/>
-      </File>
-      <File Name="hw_handoff/board_system_ila_0_1.hwh" Type="HwHandoff">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="hw_handoff/board_system_ila_0_1_bd.tcl">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="synth/board_system_ila_0_1.hwdef">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-    </FileCollection>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1663746198"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1663746198"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1663746198"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1663746198"/>
+    <FileCollection Name="SOURCES" Type="SOURCES"/>
   </CompositeFile>
 </Root>

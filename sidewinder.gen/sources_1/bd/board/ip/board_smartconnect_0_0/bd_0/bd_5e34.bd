@@ -2207,7 +2207,7 @@
                 "value": "1"
               },
               "NUM_SEG": {
-                "value": "2"
+                "value": "1"
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "1"
@@ -2231,33 +2231,12 @@
                 "value": "0b0000000000000000000000000000000000000000000000000000000000000000"
               },
               "SEG000_SIZE": {
-                "value": "16"
+                "value": "30"
               },
               "SEG000_SUPPORTS_READ": {
                 "value": "1"
               },
               "SEG000_SUPPORTS_WRITE": {
-                "value": "1"
-              },
-              "SEG001_BASE_ADDR": {
-                "value": "0x0000000076000000"
-              },
-              "SEG001_SECURE_READ": {
-                "value": "0"
-              },
-              "SEG001_SECURE_WRITE": {
-                "value": "0"
-              },
-              "SEG001_SEP_ROUTE": {
-                "value": "0b0000000000000000000000000000000000000000000000000000000000000001"
-              },
-              "SEG001_SIZE": {
-                "value": "16"
-              },
-              "SEG001_SUPPORTS_READ": {
-                "value": "1"
-              },
-              "SEG001_SUPPORTS_WRITE": {
                 "value": "1"
               },
               "SINGLE_ISSUING": {
@@ -2266,8 +2245,14 @@
               "SUPPORTS_NARROW": {
                 "value": "0"
               },
+              "SUPPORTS_READ_DECERR": {
+                "value": "1"
+              },
               "SUPPORTS_WRAP": {
                 "value": "0"
+              },
+              "SUPPORTS_WRITE_DECERR": {
+                "value": "1"
               },
               "S_PROTOCOL": {
                 "value": "AXI4LITE"
@@ -2409,7 +2394,7 @@
                 "value": "1"
               },
               "NUM_SEG": {
-                "value": "2"
+                "value": "1"
               },
               "NUM_WRITE_OUTSTANDING": {
                 "value": "1"
@@ -2433,15 +2418,6 @@
                 "value": "32"
               },
               "SEP000_WDATA_WIDTH": {
-                "value": "32"
-              },
-              "SEP001_PROTOCOL": {
-                "value": "AXI4"
-              },
-              "SEP001_RDATA_WIDTH": {
-                "value": "32"
-              },
-              "SEP001_WDATA_WIDTH": {
                 "value": "32"
               },
               "SINGLE_ISSUING": {
